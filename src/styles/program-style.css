@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #020011;
+}
+
+.program-h1 {
+  color: #e6e6e6;
+  font-family: "Inter";
+  font-size: 4.0625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -0.09344rem;
+  display: flex;
+  justify-content: center;
+}
+
+.installationer {
+  margin: 2.5%;
+}
+
+.installations-article {
+  display: grid;
+  grid-template-columns: 25% 65% 10%;
+  grid-gap: 10px;
+  margin-bottom: 25px;
+}
+
+.installations-billede-container {
+  max-height: 400px;
+  max-width: auto;
+}
+
+.installations-billede {
+  width: 300px;
+  height: auto;
+}
+
+.installations-navn {
+  color: #e6e6e6;
+  font-family: "Inter";
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -0.09344rem;
+}
+
+.bold {
+  color: #e6e6e6;
+  font-family: "Inter";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -0.0575rem;
+}
+
+.installations-artist,
+.installations-lokation {
+  color: #e6e6e6;
+  font-family: "Inter";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -0.0575rem;
+}
+
+.installations-nr-container {
+  width: 5.5625rem;
+}
+
+.installations-nr {
+  color: #e6e6e6;
+  font-family: Inter;
+  font-size: 10rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -0.23rem;
+}
+
+hr {
+  color: #b3b3b3;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
