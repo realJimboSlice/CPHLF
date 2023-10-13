@@ -1,5 +1,5 @@
 ---
-
+import "./src/styles/single-view-style.css"
 export async function getStaticPaths() {
   const data = await fetch("https://lyshgsmyhkhvnenhvefb.supabase.co/rest/v1/CPHLF?order=nr.asc",
     {
@@ -20,3 +20,46 @@ export async function getStaticPaths() {
 const {post} = Astro.props;
 console.log(post)
 ---
+
+<html lang="da">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{post.navn}</title>
+	</head>
+	<body>
+		<main>
+                <section class="overlord-container">
+                  <h1>{post.navn}</h1>
+                  <p>By {post.artist}</p>
+                  <div class="connect">
+                    <ul class="connect-ul">
+                      <li>Facebook</li>
+                      <li>Twitter</li>
+                      <li>Website</li>
+                    </ul>
+                  </div>
+                  
+                  <div class="content-container">
+                    <div class="left">
+                      <div class="image-container">
+                        <img class="image" src={post.image} alt="">
+                      </div>
+                      <div class="info">
+                        <p><bold>Where</bold></p>
+                        <p>{post.sted}</p>
+                      </div>
+                    </div>
+                    <div class="right">
+                      <p class="heading">About</p>
+                      <p class="brødtekst">
+                        {post.description}
+                      </p>
+                    </div>
+                  </div>
+                </section>
+
+        </main>
+	</body>

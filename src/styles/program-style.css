@@ -10,10 +10,10 @@ body {
   color: #e6e6e6;
   margin: 0;
   padding: 0;
+  font-family: "Inter";
 }
 
 .program-h1 {
-  font-family: "Inter";
   font-size: 4.0625rem;
   font-style: normal;
   font-weight: 700;
@@ -31,7 +31,6 @@ body {
 }
 
 .søgefelt {
-  font-family: "Inter";
   font-size: 3rem;
   font-style: normal;
   font-weight: 700;
@@ -95,7 +94,7 @@ a:hover {
 
 .installations-navn {
   color: #e6e6e6;
-  font-family: "Inter";
+
   font-size: 3rem;
   font-style: normal;
   font-weight: 700;
@@ -105,7 +104,6 @@ a:hover {
 
 .bold {
   color: #e6e6e6bb;
-  font-family: "Inter";
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
@@ -116,7 +114,6 @@ a:hover {
 .installations-artist,
 .installations-lokation {
   color: #e6e6e6;
-  font-family: "Inter";
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 500;
@@ -130,7 +127,6 @@ a:hover {
 
 .installations-nr {
   color: #e6e6e6;
-  font-family: Inter;
   font-size: 10rem;
   font-style: normal;
   font-weight: 500;
