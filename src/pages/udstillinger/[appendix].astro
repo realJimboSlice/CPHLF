@@ -1,5 +1,5 @@
 ---
-import styles from "../../styles/single-view-style.css";
+import "../../styles/single-view-style.css";
 export async function getStaticPaths() {
   const data = await fetch("https://lyshgsmyhkhvnenhvefb.supabase.co/rest/v1/CPHLF?order=nr.asc",
     {
@@ -27,7 +27,6 @@ console.log(post)
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-    <link rel="stylesheet" href={styles} type="text/css">
 		<title>{post.navn}</title>
 	</head>
 	<body>
