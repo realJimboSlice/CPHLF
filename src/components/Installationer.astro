@@ -1,11 +1,10 @@
 ---
 const {data} = Astro.props;
-console.log(data);
 ---
 
-<article class="installations-article">
+<!-- <article class="installations-article">
     <div class="installations-billede-container">
-        <img class="installations-billede"src={data.image} alt={data.navn}>
+        <img class="installations-billede" src={data.image} alt={data.navn}>
     </div>
 
     <div class="installations-kortinfo">
@@ -20,4 +19,22 @@ console.log(data);
 
 </article>
 
-<hr>
+<hr> -->
+
+<a href={`udstillinger/${data.appendix}`}>
+    <li class="installations-list-item">
+      <div class="installations-billede-container">
+        <img class="installations-billede" src={data.image} alt={data.navn}>
+      </div>
+      
+      <div class="installations-kortinfo">
+        <h2 class="installations-navn">{data.navn}</h2>
+        <p class="installations-artist"><span class="bold">Af: </span> {data.artist}</p>
+        <p class="installations-lokation"><span class="bold">Hvor: </span> {data.sted}</p>
+      </div>
+      
+      <div class="installations-nr-container">
+        <p class="installations-nr">{data.nr}</p>
+      </div>
+    </li>
+  </a>

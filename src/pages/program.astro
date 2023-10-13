@@ -3,7 +3,7 @@
 import Installationer from "../components/Installationer.astro";
 import "../styles/program-style.css";
 const data = await fetch(
-    "https://lyshgsmyhkhvnenhvefb.supabase.co/rest/v1/CPHLF",
+    "https://lyshgsmyhkhvnenhvefb.supabase.co/rest/v1/CPHLF?order=nr.asc",
     {
         method : "GET", 
         headers: {
@@ -26,10 +26,53 @@ const data = await fetch(
 	<body>
 		<main>
                 <h1 class="program-h1">CLF Program 2024</h1>
-                <section class="installationer">
+                <!-- <section class="installationer">
                     {data.map(installation=>{return <Installationer data={installation} />})}
+                </section> -->
+
+                <section class="søgefelt-container"><input type="text" class="søgefelt" id="searchInput" placeholder="Søg efter udstilling, artist, nummer eller lokation"></section>
+
+                <section class="installationer">
+                    <ul class="installations-list" id="installationsList">
+                        {data.map(installation=>{return <Installationer data={installation} />})}
+                    </ul>
                 </section>
 
         </main>
 	</body>
+    <script>
+// Get input element & installations list
+const searchInput = document.getElementById('searchInput');
+const installationsList = document.getElementById('installationsList');
+
+// Event listener
+searchInput.addEventListener('input', function () {
+    const searchText = searchInput.value.toLowerCase();
+    const listItems = installationsList.querySelectorAll('.installations-list-item');
+
+    listItems.forEach(function (item) {
+        const name = item.querySelector('.installations-navn').textContent.toLowerCase();
+        const artist = item.querySelector('.installations-artist').textContent.toLowerCase();
+        const location = item.querySelector('.installations-lokation').textContent.toLowerCase();
+        const number = item.querySelector('.installations-nr').textContent.toLowerCase();
+
+        if (
+            name.includes(searchText) ||
+            artist.includes(searchText) ||
+            location.includes(searchText) ||
+            number.includes(searchText)
+        ) {
+            item.style.display = '';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+});
+
+window.addEventListener('load', function() {
+    const searchInput = document.getElementById('searchInput');
+    searchInput.value = ''; // Clear the input field
+});
+
+    </script>
 </html>

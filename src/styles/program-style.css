@@ -7,10 +7,12 @@
 
 body {
   background: #020011;
+  color: #e6e6e6;
+  margin: 0;
+  padding: 0;
 }
 
 .program-h1 {
-  color: #e6e6e6;
   font-family: "Inter";
   font-size: 4.0625rem;
   font-style: normal;
@@ -21,15 +23,64 @@ body {
   justify-content: center;
 }
 
-.installationer {
-  margin: 2.5%;
+.søgefelt-container {
+  margin: 5%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #e6e6e6;
 }
 
-.installations-article {
+.søgefelt {
+  font-family: "Inter";
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -0.09344rem;
+  background-color: #020011;
+  color: #e6e6e6;
+  border: none;
+  padding: 10px;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.søgefelt::placeholder {
+  color: #e6e6e6bb;
+}
+
+.søgefelt:focus {
+  outline: none;
+}
+
+.søgefelt:focus::placeholder {
+  color: transparent;
+}
+
+.søgefelt:hover::placeholder {
+  filter: brightness(60%);
+}
+
+.installationer {
+  margin: 5%;
+}
+
+.installations-list-item {
   display: grid;
   grid-template-columns: 25% 65% 10%;
-  grid-gap: 10px;
+  grid-gap: 30px;
+  margin-top: 25px;
   margin-bottom: 25px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  filter: brightness(60%);
 }
 
 .installations-billede-container {
@@ -53,7 +104,7 @@ body {
 }
 
 .bold {
-  color: #e6e6e6;
+  color: #e6e6e6bb;
   font-family: "Inter";
   font-size: 1.5rem;
   font-style: normal;
@@ -85,10 +136,4 @@ body {
   font-weight: 500;
   line-height: 150%;
   letter-spacing: -0.23rem;
-}
-
-hr {
-  color: #b3b3b3;
-  margin-top: 10px;
-  margin-bottom: 40px;
 }

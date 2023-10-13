@@ -1,0 +1,22 @@
+---
+
+export async function getStaticPaths() {
+  const data = await fetch("https://lyshgsmyhkhvnenhvefb.supabase.co/rest/v1/CPHLF?order=nr.asc",
+    {
+        method : "GET", 
+        headers: {
+            apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx5c2hnc215aGtodm5lbmh2ZWZiIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTY0OTMzNjIsImV4cCI6MjAxMjA2OTM2Mn0.Aczj1UCZ1xo2WbBs9kEOyXmLPlKFdAw3Q11-9a99WSg" 
+        },
+    }).then(response => response.json());
+
+  return data.map((post) => {
+    return {
+      params: { appendix: post.appendix },
+      props: { post },
+    };
+  });
+}
+
+const {post} = Astro.props;
+console.log(post)
+---
